@@ -12,7 +12,7 @@ license = {text = "MIT"}
 
 [tool.pdm.scripts]
 chat = "python3.12 chat.py"
-start = "python3.12 main.py"
+start = "gunicorn main:app --reload"
 
 [tool.pdm]
 distribution = false

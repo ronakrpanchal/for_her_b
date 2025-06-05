@@ -1,0 +1,18 @@
+[project]
+name = "for-her"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "ronakrpanchal", email = "rhtpanchal76@gmail.com"},
+]
+dependencies = ["langgraph>=0.4.7", "langchain-groq>=0.3.2", "langchain-core>=0.3.63", "langchain-community>=0.3.24", "python-dotenv>=1.1.0", "fastapi>=0.115.12", "uvicorn>=0.34.3"]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm.scripts]
+chat = "python3.12 chat.py"
+start = "python3.12 main.py"
+
+[tool.pdm]
+distribution = false

@@ -3,7 +3,7 @@ services:
     name: for_her_b
     env: python
     buildCommand: pip install pdm && pdm install --prod
-    startCommand: pdm run uvicorn main:app --host 0.0.0.0 --port $PORT
+    startCommand: pdm run uvicorn main:app --host 0.0.0.0
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0

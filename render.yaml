@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: for-her-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pdm install
+    startCommand: bash start.sh
+    envVars:
+      - key: PORT
+        value: 8000

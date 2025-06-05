@@ -4,6 +4,9 @@ from pydantic import BaseModel, Field
 from typing import Optional, List
 import os
 from contextlib import asynccontextmanager
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Import your PetPal chatbot
 from chat import PetPalChatbot  # Update with your actual filename
@@ -275,10 +278,12 @@ if __name__ == "__main__":
     print("📝 API Documentation will be available at: http://localhost:8000/docs")
     print("🔄 Interactive API testing at: http://localhost:8000/redoc")
     
+    PORT = os.getenv("PORT", 8000)  # Use PORT env var or default to 8000
+    
     uvicorn.run(
         "main:app",  # Replace "main" with your filename
         host="127.0.0.1",
-        port=8000,
+        port=PORT,
         reload=True,  # Enable auto-reload during development
         log_level="info"
     )

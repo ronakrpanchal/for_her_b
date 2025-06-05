@@ -278,7 +278,7 @@ if __name__ == "__main__":
     print("📝 API Documentation will be available at: http://localhost:8000/docs")
     print("🔄 Interactive API testing at: http://localhost:8000/redoc")
     
-    PORT = os.getenv("PORT", 8000)  # Use PORT env var or default to 8000
+    PORT = int(os.getenv("PORT", 8000))  # Use PORT env var or default to 8000
     
     uvicorn.run(
         "main:app",  # Replace "main" with your filename
